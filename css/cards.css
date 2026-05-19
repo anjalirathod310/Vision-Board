@@ -1,0 +1,258 @@
+/* ================= CARD SIZE ================= */
+
+.card {
+  position: relative;
+  height: 380px;
+  perspective: 1400px;
+}
+
+/* ================= INNER ================= */
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
+  border: 2px dashed rgba(255, 170, 200, 0.6);
+}
+
+/* Hover glow */
+.card:hover .card-inner {
+  border-color: rgba(255, 130, 180, 0.9);
+  box-shadow:
+    0 0 12px rgba(255, 150, 190, 0.5),
+    0 25px 70px rgba(255, 110, 160, 0.3);
+}
+
+/* ================= FRONT & BACK ================= */
+
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  backface-visibility: hidden;
+}
+
+/* ================= FRONT ================= */
+
+.card-front {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fdf6f9;
+}
+
+/* REMOVE TITLE FROM CARD FACE */
+.card-title {
+  display: none;
+}
+
+/* ================= FRONT IMAGE MAPPING ================= */
+
+.card-front.career {
+  background-image: url("../assets/career.jpg");
+}
+
+.card-front.health {
+  background-image: url("../assets/health.jpg");
+}
+
+.card-front.lifestyle {
+  background-image: url("../assets/lifestyle.jpg");
+}
+
+.card-front.money {
+  background-image: url("../assets/money.jpg");
+}
+
+.card-front.mindset {
+  background-image: url("../assets/mindset.jpg");
+}
+
+.card-front.hobbies {
+  background-image: url("../assets/hobbies.jpg");
+}
+
+/* ================= BACK ================= */
+
+.card-back {
+  background: #fafafa;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card-back-content {
+  padding: 22px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.goals {
+  margin-bottom: 16px;
+  padding-left: 18px;
+}
+
+.goals li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.achievements {
+  border-top: 1px dashed #ccc;
+  padding-top: 12px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ================= ACTION BAR ================= */
+
+.card-back-actions {
+  padding: 14px;
+  border-top: 1px solid #e6e6e6;
+  background: #ffffff;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 11px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #222;
+  color: #fff;
+}
+
+.add-btn:hover {
+  opacity: 0.92;
+}
+
+/* ================= FLIP ================= */
+
+.card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* ================= ACHIEVEMENT IMAGES ================= */
+
+.achievement-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+/* ================= PAGE TITLE ================= */
+
+.page-title {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  color: #000;
+  text-align: left;
+  margin: 20px 0 30px 20px;
+  text-shadow:
+    0 0 2px #000,
+    0 0 6px rgba(255, 150, 200, 0.5);
+}
+
+/* ================= STICKERS (FINAL CLEAN SYSTEM) ================= */
+
+.board {
+  position: relative;
+}
+
+/* Base sticker */
+/* Stickers scroll WITH the board */
+.vision-wrapper {
+  position: relative;
+}
+
+.sticker {
+  position: absolute;   /* 🔥 key change */
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Sizes */
+/* Sizes (final tuned) */
+.sticker.big {
+  width: 150px; /* cig.png */
+}
+
+#sticker-girl,
+#sticker-heel {
+  width: 200px; /* Increased by 40px (from 160px) */
+}
+
+#sticker-music,
+#sticker-smoke {
+  width: 130px;
+}
+
+/* ---------- EXACT POSITIONS (YOUR SPEC) ---------- */
+
+/* girl.png — BIG — left — top — very close */
+#sticker-girl {
+  top: 30px;
+  left: -10px;
+}
+
+/* music.png — MEDIUM — right — upper-middle — touching */
+#sticker-music {
+  top: 38%;
+  right: -6px;
+}
+
+/* smoke.png — MEDIUM — right — top — very close */
+#sticker-smoke {
+  top: 40px;
+  right: -8px;
+}
+
+/* heel.png — BIG — right — bottom — touching */
+#sticker-heel {
+  bottom: 40px;
+  right: -8px;
+}
+
+/* cig.png — BIG — left — lower-middle — touching */
+#sticker-cig {
+  top: 62%;
+  left: -12px;
+}
+
+/* My Achievements button */
+.open-btn.pink {
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+
+  background: #f7b2c4;
+  color: #3a0f1e;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.open-btn.pink:hover {
+  background: #f39bb4;
+}
+
+/* Music button (fixed) */
+.music-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 10001;
+  width: auto;
+  padding: 10px 14px;
+}
+

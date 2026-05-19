@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Achievements</title>
+  <link rel="stylesheet" href="css/achievements.css">
+  <link rel="stylesheet" href="css/intro.css">
+</head>
+
+<body>
+
+<!-- Intro Overlay -->
+<div id="intro-overlay">
+  <div class="sparkle-container">
+    <div class="sparkle s1"></div>
+    <div class="sparkle s2"></div>
+    <div class="sparkle s3"></div>
+    <div class="sparkle s4"></div>
+    <div class="sparkle s5"></div>
+  </div>
+
+  <!-- Floating Butterflies and Stars -->
+  <div class="floating-element b1">🦋</div>
+  <div class="floating-element b2">🦋</div>
+  <div class="floating-element b3">🦋</div>
+  <div class="floating-element fs1">⭐</div>
+  <div class="floating-element fs2">✨</div>
+  <div class="floating-element fs3">⭐</div>
+
+  <div class="intro-text">✨ Shine ✨</div>
+</div>
+
+<div class="ach-wrapper">
+
+  <!-- TOP SECTION -->
+  <section class="top-section">
+
+    <!-- LEFT: FACE CARD -->
+    <div class="face-card">
+      <img id="faceImage" alt="Vision card">
+    </div>
+
+    <!-- RIGHT: GOALS -->
+    <div class="goals-panel">
+<h2 id="sectionTitle"></h2>
+
+<h3 class="list-title">List</h3>
+
+<ol class="goals" id="goalsList"></ol>
+
+
+      <!-- Hidden file input -->
+      <input type="file" accept="image/*" id="fileInput" class="sr-hidden" hidden>
+
+      <!-- Button BELOW list -->
+      <button type="button" class="add-btn pink" id="addAchievement">
+        ＋ Add Achievement
+      </button>
+    </div>
+
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section">
+    <h3 class="list-title">Gallery</h3>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="js/achievements.js"></script>
+</body>
+</html>

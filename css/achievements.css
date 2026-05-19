@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #faf7f9;
+}
+
+.ach-wrapper {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.sr-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------------- TOP SECTION ---------------- */
+
+.top-section {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+  align-items: start;
+}
+
+/* Face card */
+.face-card img {
+  width: 100%;
+  border-radius: 22px;
+  border: 2px dashed rgba(255, 170, 200, 0.6);
+}
+
+/* Goals panel */
+.goals-panel h2 {
+  margin-bottom: 18px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+/* Goals list */
+.goals-panel .goals {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 24px;
+}
+
+.goals-panel .goals li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 50px; /* Adjusted space for number */
+  display: flex;
+  align-items: center;
+}
+
+.goals-panel .goals li::before {
+  content: attr(data-index);
+  position: absolute;
+  left: 10px;
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.goal-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ebd0db;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #444;
+  background: #fffcfd;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.goal-input:focus {
+  border-color: #f7b2c4;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(247, 178, 196, 0.15);
+}
+
+.goal-input::placeholder {
+  color: #ccc;
+  font-style: italic;
+}
+
+/* Button */
+.add-btn.pink {
+  padding: 14px 22px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  background: #f7b2c4;
+  color: #3a0f1e;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ---------------- GALLERY ---------------- */
+
+.gallery-section {
+  margin-top: 60px;
+  padding-bottom: 40px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 10px; /* Space for scrollbar */
+}
+
+/* Custom scrollbar for gallery */
+.gallery::-webkit-scrollbar {
+  width: 8px;
+}
+.gallery::-webkit-scrollbar-track {
+  background: #fdf6f9;
+  border-radius: 4px;
+}
+.gallery::-webkit-scrollbar-thumb {
+  background: #f7b2c4;
+  border-radius: 4px;
+}
+.gallery::-webkit-scrollbar-thumb:hover {
+  background: #f39bb4;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  color: #ff4d4d;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.gallery-item:hover .delete-btn {
+  opacity: 1;
+}
+
+.delete-btn:hover {
+  background: #ff4d4d;
+  color: white;
+}
+
+.list-title {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  letter-spacing: 0.5px;
+}

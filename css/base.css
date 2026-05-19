@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f4f4f2;
+  color: #222;
+  min-height: 100vh;
+}
+
+/* ================= VISION BOARD TITLE ================= */
+
+.board-title {
+  text-align: center;
+  margin: 20px 0 40px;
+  
+  font-size: 3rem;
+  font-weight: 600;
+
+  /* Cursive / handwritten feel */
+  font-family: "Playfair Script", "Brush Script MT", "Segoe Script",
+               "Lucida Handwriting", cursive;
+
+  /* Metallic black effect */
+  background: linear-gradient(
+    120deg,
+    #000000,
+    #2a2a2a,
+    #000000,
+    #3a3a3a,
+    #000000
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  /* Subtle glitter / shine */
+  text-shadow:
+    0 1px 1px rgba(255, 255, 255, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.4);
+
+  letter-spacing: 1px;
+}
+
+/* ================= TITLE IMAGE ================= */
+
+.vision-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 30px; /* space above & below */
+}
+
+.vision-title img {
+  width: 400px;              /* Increased by 40px (from 360px) */
+  max-width: 90%;
+  height: auto;              /* keeps 689x174 ratio */
+  filter:
+    drop-shadow(0 3px 6px rgba(0,0,0,0.25))
+    drop-shadow(0 0 6px rgba(255, 215, 150, 0.25)); /* soft metallic glow */
+}
+

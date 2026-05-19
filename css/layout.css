@@ -1,0 +1,29 @@
+/* ================= BOARD LAYOUT ================= */
+
+.board {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 🔥 2 COLUMNS */
+  gap: 40px;
+}
+
+/* ================= TITLE ================= */
+
+.vision-title {
+  display: flex;
+  justify-content: center;
+  margin: 28px 0 40px;
+}
+
+.vision-title img {
+  width: 420px;          /* medium size */
+  max-width: 90%;
+  height: auto;
+
+  /* IMPORTANT: keep image 100% pure */
+  filter: none;
+  box-shadow: none;
+}
